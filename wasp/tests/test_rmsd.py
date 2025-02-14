@@ -9,7 +9,7 @@ def test_rmsd_identical():
     rmsd = compute_rmsd(atoms1, atoms2)
     assert np.isclose(rmsd, 0, atol=1e-8), f"Expected 0 but got {rmsd}"
 
-def test_rmsd_nonzero():
+def test_rmsd_rotated():
     """
     Test that the RMSD function returns a non-negative value.
     (Note: Due to the minimization of rotation and translation, even shifted geometries
