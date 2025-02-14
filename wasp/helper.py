@@ -9,6 +9,8 @@ def extract_mo_coeff(filename):
 
 def compute_rmsd(atoms1, atoms2):
     """Compute RMSD between two ASE Atoms objects."""
-    minimize_rotation_and_translation(atoms1, atoms2)
-    return np.sqrt(np.mean(np.sum((atoms1.get_positions() - atoms2.get_positions())**2, axis=1)))
+    atoms_1 = atoms1
+    atoms_2 = atoms2
+    minimize_rotation_and_translation(atoms_1, atoms_2)
+    return np.sqrt(np.mean(np.sum((atoms_1.get_positions() - atoms_2.get_positions())**2, axis=1)))
 

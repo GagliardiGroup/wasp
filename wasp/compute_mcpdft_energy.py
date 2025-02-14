@@ -3,7 +3,7 @@ import h5py
 from pyscf import gto, mcscf, mcpdft, M
 from ase.units import Ha, Bohr
 
-def compute_mcpdft_energy(mol, mo_coeff, chk_folder, frame_index=0, flag=False):
+def compute_mcpdft_energy(mol, mo_coeff, t_func="tPBE", ncas=9, nelecas=7, chk_folder, frame_index=0, flag=False):
     """
     Perform a SA(2)-MCPDFT calculation and return the energy and forces.
     
@@ -12,13 +12,16 @@ def compute_mcpdft_energy(mol, mo_coeff, chk_folder, frame_index=0, flag=False):
     :param chk_folder: Folder path to save checkpoint files.
     :param frame_index: Index of the current frame.
     :param flag: If True, save the MO coefficients.
-    :return: Tuple (energy, forces)
+    :param t_func: The type of translated functional to use (default "tPBE").
+    :param ncas: The number of active space orbitals.
+    :param nelecas: The number of active space electrons.
+    :return: Tuple (energy, forces) in ASE units
     """
     hf = mol.UHF()
     hf.max_cycle = 0
     hf.run()
 
-    mc = mcpdft.CASSCF(hf, "tPBE", 9, 7, grids_level=6).state_average_([.5, .5])
+    mc = mcpdft.CASSCF(hf, t_func, ncas, nelecas, grids_level=6).state_average_([.5, .5])
     mc.max_cycle = 2000
     mc.conv_tol = 1e-7
     mc.conv_tol_grad = 1e-4
@@ -39,6 +42,7 @@ def compute_mcpdft_energy(mol, mo_coeff, chk_folder, frame_index=0, flag=False):
     energy_ase = etot * Ha
     forces_ase = -grad * (Ha / Bohr)
     return energy_ase, forces_ase
+
 
 def save_mo_coeff(mc, chk_folder, frame_index):
     """
