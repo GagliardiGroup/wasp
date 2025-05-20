@@ -1,4 +1,4 @@
-from wasp.core import WASP
+from src.wasp import WASP
 
 wasp = WASP(
     delta=0.8,
