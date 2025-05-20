@@ -2,7 +2,7 @@ from src.wasp import WASP
 
 wasp = WASP(
     delta=0.8,
-    checkpoint_xyz='examples/data/trajectory.xyz',
+    checkpoint_xyz='examples/data/reaction_path.xyz',
     checkpoint_indices=[0, 6, 9, 11],
     checkpoint_hdf5_folder='examples/data/hdf5',
     xyz='examples/data/geometry.xyz',
