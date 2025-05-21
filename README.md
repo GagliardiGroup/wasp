@@ -1,6 +1,6 @@
 # WASP: Weighted Active Space Protocol
 
-**WASP** (Weighted Active Space Protocol) is a Python library designed to generate geometry-specific molecular orbital (MO) coefficient guesses through interpolation from a reference library of wave function checkpoints.
+**WASP** (Weighted Active Space Protocol) is a Python framework designed to generate molecular orbital (MO) coefficient guesses through interpolation from a reference library of wave function checkpoints.
 
 ## 📚 Requirements
 
