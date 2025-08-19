@@ -1,3 +1,7 @@
+<p align="left">
+  <img src="./imgs/wasp_logo.png" alt="Alt text" width="200"/>
+</p>
+
 # WASP: Weighted Active Space Protocol
 
 **WASP** (Weighted Active Space Protocol) is a Python framework designed to generate molecular orbital (MO) coefficient guesses through interpolation from a reference library of wave function checkpoints.
@@ -6,12 +10,9 @@
 
 To use WASP, you'll need the following Python packages:
 
-- [ASE](https://gitlab.com/ase/ase)
-- [PySCF](https://github.com/pyscf/pyscf)
-- [PySCF-FORGE](https://github.com/pyscf/pyscf-forge) (for MCPDFT support)
-- numpy
-- h5py
-
+```bash
+pip install pyscf ase
+```
 ## ▶️ Quick Start
 
 To run the example and see WASP in action:
