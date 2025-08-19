@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="./imgs/wasp_logo_1.png" alt="Alt text" width="200"/>
+  <img src="./wasp_logo.png" alt="Alt text" width="300"/>
 </p>
 
 # WASP: Weighted Active Space Protocol
