@@ -34,13 +34,14 @@ This script will:
 If you use **WASP** in your research or publications, please cite the following:
 
 ```bibtex
-@misc{seal2025wasp,
-      title={Weighted Active Space Protocol for Multireference Machine-Learned Potentials}, 
-      author={Aniruddha Seal and Simone Perego and Matthew R. Hennefarth and Umberto Raucci and Luigi Bonati and Andrew L. Ferguson and Michele Parrinello and Laura Gagliardi},
-      year={2025},
-      eprint={2505.10505},
-      archivePrefix={arXiv},
-      primaryClass={physics.chem-ph},
-      url={https://arxiv.org/abs/2505.10505}, 
+@article{seal2025weighted,
+  title={Weighted active space protocol for multireference machine-learned potentials},
+  author={Seal, Aniruddha and Perego, Simone and Hennefarth, Matthew R and Raucci, Umberto and Bonati, Luigi and Ferguson, Andrew L and Parrinello, Michele and Gagliardi, Laura},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={122},
+  number={38},
+  pages={e2513693122},
+  year={2025},
+  publisher={National Academy of Sciences}
 }
 ```
